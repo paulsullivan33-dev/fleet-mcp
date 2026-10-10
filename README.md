@@ -103,6 +103,12 @@ and changed services take effect immediately. Config mistakes are
 reported as warnings (the server keeps running with the services that
 loaded cleanly).
 
+## Companion scripts
+
+`disk-check.sh` ships in this repo as an example companion script — copy
+it next to your other check scripts and point a service entry at it (see
+`services.example.json` for the `disk_check` entry).
+
 ## Built-in tools
 
 - `list_services` — lists every configured service and its parameters.

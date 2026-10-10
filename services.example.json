@@ -15,6 +15,22 @@
         }
       },
       "timeout_secs": 30
+    },
+    {
+      "name": "disk_check",
+      "description": "Check disk space usage on a fleet host over SSH.",
+      "command": [
+        "/home/paul/bin/disk-check.sh",
+        "{host}"
+      ],
+      "parameters": {
+        "host": {
+          "type": "string",
+          "description": "Fleet host to check: hostname, IP, or [user@]host.",
+          "required": true
+        }
+      },
+      "timeout_secs": 30
     }
   ]
 }
