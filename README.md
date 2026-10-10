@@ -113,6 +113,8 @@ it next to your other check scripts and point a service entry at it (see
 
 - `list_services` — lists every configured service and its parameters.
 - `reload_services` — re-reads `services.json` without restarting.
+  (Restarting the systemd service itself is a config entry too — see the
+  `restart_fleet_mcp` example in `services.example.json`.)
 
 ## Security notes
 

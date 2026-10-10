@@ -31,6 +31,17 @@
         }
       },
       "timeout_secs": 30
+    },
+    {
+      "name": "restart_fleet_mcp",
+      "description": "Restart the fleet-mcp systemd service on this machine. Needed after fleet_mcp.py itself changes; plain services.json edits only need reload_services. Returns immediately; the restart happens a couple seconds later, so wait a few seconds before the next tool call.",
+      "command": [
+        "/bin/bash",
+        "-c",
+        "(sleep 2; systemctl --user restart fleet-mcpo) >/dev/null 2>&1 & echo 'restart scheduled'"
+      ],
+      "parameters": {},
+      "timeout_secs": 15
     }
   ]
 }
