@@ -1,0 +1,20 @@
+{
+  "services": [
+    {
+      "name": "cpu_check",
+      "description": "Check CPU usage, load average, and top processes on a fleet host over SSH.",
+      "command": [
+        "/home/paul/bin/cpu-check.sh",
+        "{host}"
+      ],
+      "parameters": {
+        "host": {
+          "type": "string",
+          "description": "Fleet host to check: hostname, IP, or [user@]host.",
+          "required": true
+        }
+      },
+      "timeout_secs": 30
+    }
+  ]
+}
